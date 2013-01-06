@@ -1,0 +1,18 @@
+tile -> image conversion
+tiles are 8x8 pxels
+4 bits per pixel
+
+
+physical -> data conversion
+[pointer region]
+first get the count of all animations
+allocate enough memory for all pointers
+then getting the number of animations and
+frames, you can also add the pointers to
+animation data
+[animation data]
+Allocate enough memory for all the count of
+frames. since animation type and delay is
+known, append it during allocation. if the
+sprite has 1 palette, also repoint all
+palette pointers during allocation.

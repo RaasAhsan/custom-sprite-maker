@@ -1,0 +1,28 @@
+gif format
+
+[header]
+6 bytes, signature - GIF87a, GIF89a
+2 bytes, width
+2 bytes, height
+1 byte, depth
+1 byte, background
+1 byte, pixel aspect ratio in gif89a
+
+[image descriptors]
+1 byte - id
+2 bytes - imageleft
+2 bytes - imagetop
+2 bytes - width
+2 bytes - height 
+1 byte - depth
+
+id is generally , or 0x2c to denote the
+beginning of an image
+
+ending an image is ;, or 0x3b. in gif89a, 
+another 0x2c means it is an animated image!
+
+imageleft - how many pixels left of the
+width(in the header) the image starts
+imagetop - same as above below top
+depth
